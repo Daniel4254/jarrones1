@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Jarrones</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #555;
+      color: white;
+    }
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .producto {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    model-viewer {
+      width: 100%;
+      height: 300px;
+      background-color: #ddd;
+      border-radius: 8px;
+      cursor: grab;
+    }
+    .nombre {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Catálogo de Jarrones</h1>
+
+  <div class="catalogo">
+    <div class="producto">
+      <model-viewer src="jarron1.glb" alt="Jarrón 1" auto-rotate camera-controls></model-viewer>
+      <div class="nombre">Jarrón Clásico</div>
+    </div>
+    <div class="producto">
+      <model-viewer src="jarron2.glb" alt="Jarrón 2" auto-rotate camera-controls></model-viewer>
+      <div class="nombre">Jarrón Moderno</div>
+    </div>
+    <div class="producto">
+      <model-viewer src="jarron3.glb" alt="Jarrón 3" auto-rotate camera-controls></model-viewer>
+      <div class="nombre">Jarrón Rústico</div>
+    </div>
+    <div class="producto">
+      <model-viewer src="jarron4.glb" alt="Jarrón 4" auto-rotate camera-controls></model-viewer>
+      <div class="nombre">Jarrón Minimalista</div>
+    </div>
+  </div>
+
+</body>
+</html>
